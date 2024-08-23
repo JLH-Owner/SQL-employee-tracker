@@ -4,7 +4,7 @@
   "description": "Employee Tracker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "\"test\"",
     "start": "node index.js"
   },
   "repository": {
@@ -12,10 +12,9 @@
     "url": "git+https://github.com/JLH-Owner/SQL-employee-tracker.git"
   },
   "keywords": [
-    "employees",
-    "departments",
-    "roles",
-    "tracker"
+    "Employee",
+    "Tracker",
+    "SQL"
   ],
   "author": "Stacy Herbert",
   "license": "ISC",
@@ -24,11 +23,10 @@
   },
   "homepage": "https://github.com/JLH-Owner/SQL-employee-tracker#readme",
   "dependencies": {
-    "chalk": "^5.3.0",
-    "console.table": "^0.10.0",
     "dotenv": "^16.4.5",
-    "figlet": "^1.7.0",
+    "express": "^4.19.2",
     "inquirer": "^8.2.4",
-    "pg": "^8.12.0"
+    "pg": "^8.12.0",
+    "sequelize": "^6.37.3"
   }
 }
