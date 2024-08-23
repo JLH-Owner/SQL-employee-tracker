@@ -21,8 +21,9 @@ Follow the commands in the demonstration video to perform the desired functions.
 Author: Stacy Herbert. No collaborators.
 
 ## Images:
+<img src="assets\screen-recording.png"/>
 
 ## LINKS
 GitHub Repository: https://github.com/JLH-Owner/SQL-employee-tracker
 
-Demonstration Video: 
+Demonstration Video: https://drive.google.com/file/d/1FVc3RJJ1Eg4NUFVv-oxpiKzGG2UcABiJ/view?usp=drive_link

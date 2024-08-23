@@ -24,8 +24,8 @@ class Database {
         return res.rows;
     }
 
-    async addDepartment(department_name) {
-        const res = await pool.query('INSERT INTO department (name) VALUES ($1, $2, $3) RETURNING *', [department_name]);
+    async addDepartment(name) {
+        const res = await pool.query('INSERT INTO department (name) VALUES ($1, $2, $3) RETURNING *', [name]);
         return res.rows[0];
     }
 

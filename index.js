@@ -7,6 +7,7 @@ async function main() {
         name: 'action',
         message: 'What would you like to do?',
         choices: [
+            'View all departments',
             'View all employees',
             'Add a Department',
             'Add a Role',
@@ -23,26 +24,29 @@ async function main() {
     });
 
     switch (action) {
+        case 'View all departments':
+            const departments = await db.getDepartments();
+            console.table(departments);
+            break;
+        
         case 'View all employees':
             const employees = await db.getEmployees();
             console.table(employees);
             break;
 
-            case 'Add a department':
-            const { department_name } = await inquirer.prompt([
-                { department_name: 'department_name', message: 'What is the name of the new department?:' },
-                
+        case 'Add a department':
+            const { name } = await inquirer.prompt([
+                { name: 'name', message: 'What is the name of the new department?:' },
             ]);
-            await db.addDepartment(department_name);
+            await db.addDepartment(name);
             console.log('Department added successfully!');
             break;
 
-            case 'Add a role':
+        case 'Add a role':
             const { title, salary, department } = await inquirer.prompt([
-                { title: 'title', message: 'What is the title of the new role?:' },
-                { salary: 'salary', message: 'What is the salary of the new role?:' },
-                { department: 'department', message: 'What department does the new role belong to?:' }
-                
+                { name: 'title', message: 'What is the title of the new role?:' },
+                { name: 'salary', message: 'What is the salary of the new role?:' },
+                { name: 'department', message: 'What department does the new role belong to?:' }
             ]);
             await db.addRole(title, salary, department);
             console.log('Role added successfully!');
